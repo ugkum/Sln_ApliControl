@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0FB8B074-C518-4307-B05B-AD0BABE8AE51}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ApliControl</RootNamespace>
+    <AssemblyName>ApliControl</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>C:\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DPFPCtlXTypeLibNET, Version=1.6.1.0, Culture=neutral, PublicKeyToken=c0c98f712d5392a7">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="DPFPCtlXWrapperNET, Version=1.6.1.0, Culture=neutral, PublicKeyToken=c0c98f712d5392a7" />
+    <Reference Include="DPFPGuiNET, Version=1.6.1.0, Culture=neutral, PublicKeyToken=d4f4a0bd9c559145" />
+    <Reference Include="DPFPShrNET, Version=1.6.1.0, Culture=neutral, PublicKeyToken=d902fe275a8d6cf2" />
+    <Reference Include="DPFPShrXTypeLibNET, Version=1.6.1.0, Culture=neutral, PublicKeyToken=c0c98f712d5392a7">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="DPFPVerNET, Version=1.6.1.0, Culture=neutral, PublicKeyToken=4de0a9c4dcc83984, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Sln_MicroSisPlantilla\MicroSisPlani\bin\Debug\DPFPVerNET.dll</HintPath>
+    </Reference>
+    <Reference Include="Klik.Windows.Forms.EntryLib.V2.2005">
+      <HintPath>C:\Klik.Windows.Forms.EntryLib.V2.2005.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cls_Libreria.cs" />
+    <Compile Include="Cls_UsuLogin.cs" />
+    <Compile Include="Complementos.cs" />
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Explorador_Personal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Explorador_Personal.designer.cs">
+      <DependentUpon>Frm_Explorador_Personal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Explo_Asistencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Explo_Asistencia.designer.cs">
+      <DependentUpon>Frm_Explo_Asistencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Marcar_Asistencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Marcar_Asistencia.designer.cs">
+      <DependentUpon>Frm_Marcar_Asistencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Marcar_Asis_Manual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Marcar_Asis_Manual.designer.cs">
+      <DependentUpon>Frm_Marcar_Asis_Manual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_Personalizados\Frm_Advertencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_Personalizados\Frm_Advertencia.designer.cs">
+      <DependentUpon>Frm_Advertencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_Personalizados\Frm_Filtro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_Personalizados\Frm_Filtro.designer.cs">
+      <DependentUpon>Frm_Filtro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_Personalizados\Frm_Msm_Bueno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_Personalizados\Frm_Msm_Bueno.designer.cs">
+      <DependentUpon>Frm_Msm_Bueno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_Personalizados\Frm_Sino.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_Personalizados\Frm_Sino.designer.cs">
+      <DependentUpon>Frm_Sino.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_Personalizados\Frm_Sinox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_Personalizados\Frm_Sinox.designer.cs">
+      <DependentUpon>Frm_Sinox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_Personalizados\Frm_Solo_Fecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_Personalizados\Frm_Solo_Fecha.designer.cs">
+      <DependentUpon>Frm_Solo_Fecha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Principal.designer.cs">
+      <DependentUpon>Frm_Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Regis_huella.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Regis_huella.Designer.cs">
+      <DependentUpon>Frm_Regis_huella.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\frmInformeDeDia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informes\frmInformeDeDia.Designer.cs">
+      <DependentUpon>frmInformeDeDia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\frmSoloFecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informes\frmSoloFecha.Designer.cs">
+      <DependentUpon>frmSoloFecha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\rptAsistenciaDelDia.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptAsistenciaDelDia.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Personal\Frm_Registro_Personal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personal\Frm_Registro_Personal.designer.cs">
+      <DependentUpon>Frm_Registro_Personal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilitarios.cs" />
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Explorador_Personal.resx">
+      <DependentUpon>Frm_Explorador_Personal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Explo_Asistencia.resx">
+      <DependentUpon>Frm_Explo_Asistencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Marcar_Asistencia.resx">
+      <DependentUpon>Frm_Marcar_Asistencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Marcar_Asis_Manual.resx">
+      <DependentUpon>Frm_Marcar_Asis_Manual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_Personalizados\Frm_Advertencia.resx">
+      <DependentUpon>Frm_Advertencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_Personalizados\Frm_Filtro.resx">
+      <DependentUpon>Frm_Filtro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_Personalizados\Frm_Msm_Bueno.resx">
+      <DependentUpon>Frm_Msm_Bueno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_Personalizados\Frm_Sino.resx">
+      <DependentUpon>Frm_Sino.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_Personalizados\Frm_Sinox.resx">
+      <DependentUpon>Frm_Sinox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_Personalizados\Frm_Solo_Fecha.resx">
+      <DependentUpon>Frm_Solo_Fecha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Principal.resx">
+      <DependentUpon>Frm_Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Regis_huella.resx">
+      <DependentUpon>Frm_Regis_huella.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\frmInformeDeDia.resx">
+      <DependentUpon>frmInformeDeDia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\frmSoloFecha.resx">
+      <DependentUpon>frmSoloFecha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\rptAsistenciaDelDia.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptAsistenciaDelDia.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personal\Frm_Registro_Personal.resx">
+      <DependentUpon>Frm_Registro_Personal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Prj_CapaEntidad\Prj_CapaEntidad.csproj">
+      <Project>{33bd61f2-f8be-44ed-9010-e1d41add9859}</Project>
+      <Name>Prj_CapaEntidad</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Prj_CapaNegocio\Prj_CapaNegocio.csproj">
+      <Project>{ff7d387f-b846-4031-9aa0-17a4d43a6eae}</Project>
+      <Name>Prj_CapaNegocio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\controlAsistencia.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logito.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apagar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="APPVERIFIER">
+      <Guid>{DAB52BCB-6990-464A-AC61-F60C8EF60E24}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actualizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imprimir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apagar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\archivo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\controlAsistencia1.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
